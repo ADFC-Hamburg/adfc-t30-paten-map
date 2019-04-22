@@ -1,6 +1,6 @@
 {
   "name": "adfc-map",
-  "version": "1.0.0",
+  "version": "0.3.0",
   "main": "index.js",
   "author": "Sven Anders <sven@anders-hamburg.de>",
   "license": "MIT",
