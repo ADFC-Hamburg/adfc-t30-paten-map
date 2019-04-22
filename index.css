@@ -2,3 +2,35 @@ div#map {
     height: 500px;
     width: 800px;
 }
+
+.adfc-map-button {
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  box-shadow: 0 8px 14px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+
+}
+.adfc-map-button-t30da {
+    background-color: #4CAF50; /* Green */
+    border: 1px solid green;
+}
+.adfc-map-button-t30antrag {
+    background-color: #4CAF50; /* Green */
+    border: 1px solid green;
+}
+.adfc-map-button-t30fordern {
+    background-color: #4CAF50; /* Green */
+    border: 1px solid green;
+}
+.adfc-map-button-details {
+    background-color: #008cba; /* Blue */
+    border: 1px solid blue;
+}
+.adfc-map-button-fehler {
+    background-color: #f44336; /* Red */
+    border: 1px solid black;
+}
