@@ -23,7 +23,7 @@ function Popup (feature, layer) {
     p = p.replace(/\[([^:]*):([^\]]*)\]/g,'<button data-id="' + feature.properties.id + '" data-action="$1" class="adfc-map-button adfc-map-button-$1">$2</button>');
     layer.bindPopup('<b>'+feature.properties.Name+ '</b><br>' +
                     feature.properties.Strasse +' '+feature.properties.Nummer+ ', '+ feature.properties.PLZ+' Hamburg<br>'+
-                    '<b>Stand der Dinge:</b>' + p;
+                    '<b>Stand der Dinge:</b> ' + p;
                    )
 }
 
