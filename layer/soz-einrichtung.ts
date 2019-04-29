@@ -14,11 +14,16 @@ const URL = 'https://tools.adfc-hamburg.de/t30-paten/version0.0.8/assets/sozEinr
 
 const FARBCODE = ['#0554fa','#ef140d','#f7ab05', '#e7ff08', '#44f917', '#000000' ]
 
-const POPUP_TEXT = ['Bitte checken.<br>[t30da:Hier ist schon Tempo 30]  [t30antrag:Ich setze mich hier für Tempo 30 ein!] [t30fordern:Hier sollte mal jemand was tun]',
-                    'Handlungsbedarf.<br>[details:Details] [t30fordern:Ich will mich hier für Tempo 30 einsetzen]',
+const POPUP_TEXT = ['Bitte checken.<br>[t30da:Hier ist schon ausreichend Tempo 30]  [t30antrag:Ich möchte hier Tempo 30 fordern] [t30fordern:Hier ist nicht ausreichend Tempo 30]',
+
+                    'Handlungsbedarf.<br>[details:Details] [t30fordern:Ich möchte hier Tempo 30 fordern] [fehler:Fehler melden]',
+
                     'Forderung bereits gestellt.<br>[details:Details] [fehler:Fehler melden]',
-                    'In Umsetzung.<br>[details:Details] [fehler:Fehler melden]',
+
+                    'In Umsetzung.<br>[details:Details] [schilderDa:Die Tempo 30 Schilder sind aufgestellt] [fehler:Fehler melden]',
+
                     'OK.<br>[details:Details] [fehler:Fehler melden]',
+
                     'Abgelehnt.<br>[details:Details] [fehler:Fehler melden]'];
 
 function Popup (feature, layer) {
