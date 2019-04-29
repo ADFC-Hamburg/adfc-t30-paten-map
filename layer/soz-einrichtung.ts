@@ -4,18 +4,22 @@ import $ from 'jquery'
 const FARBE='rot'
 const URL = 'https://tools.adfc-hamburg.de/t30-paten/version0.0.8/assets/sozEinr.json'
 
-// 0= prüfen
-// 1= nicht T30
-// 2= alles Okay
-// 3= Angeordnet
-// 4= Abgelehnt
-const FARBCODE = ['#0554fa','#ef140d','#f7ab05', '#44f917', '#e7ff08','#000000' ]
 
-const POPUP_TEXT = ['Wir wissen nicht sicher, ob hier überall Tempo 30 ist. <br>[t30da:Hier ist schon Tempo 30]  [t30antrag:Ich setze mich hier für Tempo 30 ein!] [t30fordern:Hier sollte mal jemand was tun]',
-                    'Hier ist mindestens einen Straße ohne Tempo 30 <br>[details:Details] [t30fordern:Ich will mich hier für Tempo 30 einsetzen]',
-                    'Dieser Ort ist Verkehrsberühigt <br>[details:Details] [fehler:Fehler melden]',
-                    'Die Behörde hat Tempo 30 angeordnet, nur das Schild steht noch nicht <br>[details:Details] [fehler:Fehler melden]',
-                    'Wir sehen hier keine Chance auf Tempo 30 <br>[details:Details] [fehler:Fehler melden]'];
+//0 blau: Bitte checken.
+//1 rot: Handlungsbedarf.
+//2 orange: Forderung bereits gestellt.
+//3 gelb: Umsetzung Beobachten.
+//4 grün: OK.
+//5 schwarz: Abgelehnt!
+
+const FARBCODE = ['#0554fa','#ef140d','#f7ab05', '#e7ff08', '#44f917', '#000000' ]
+
+const POPUP_TEXT = ['Bitte checken.<br>[t30da:Hier ist schon Tempo 30]  [t30antrag:Ich setze mich hier für Tempo 30 ein!] [t30fordern:Hier sollte mal jemand was tun]',
+                    'Handlungsbedarf.<br>[details:Details] [t30fordern:Ich will mich hier für Tempo 30 einsetzen]',
+                    'Forderung bereits gestellt.<br>[details:Details] [fehler:Fehler melden]',
+                    'In Umsetzung.<br>[details:Details] [fehler:Fehler melden]',
+                    'OK.<br>[details:Details] [fehler:Fehler melden]',
+                    'Abgelehnt.<br>[details:Details] [fehler:Fehler melden]'];
 
 function Popup (feature, layer) {
     console.log();
@@ -72,7 +76,7 @@ $.ajax({
     success: function (data) {
         let items=[]
         for (let item of data) {
-            item.tempo30=getRandomInt(0,4);
+            item.tempo30=getRandomInt(0,5);
             items.push({
                 "type": "Feature",
                 "properties": item
